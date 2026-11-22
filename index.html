@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#050816">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rocket Spell">
     <title>Rocket Spell — Moon Launch Mission</title>
+
+    <!-- Embedded Vector App Icons for Browser Tabs & Mobile Home-Screen Shortcuts -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='64' y2='64' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%231e1b4b'/%3E%3Cstop offset='100%25' stop-color='%23050816'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ccircle cx='14' cy='15' r='2' fill='%23fde047'/%3E%3Ccircle cx='50' cy='48' r='1.8' fill='%237dd3fc'/%3E%3Cpath d='M10 47C16 53 34 52 47 39C54 31 57 20 54 13' stroke='%2338bdf8' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3Cg transform='rotate(42 33 31)'%3E%3Cpath d='M28 45C28 45 25 53 33 57C41 53 38 45 38 45H28Z' fill='%23f97316'/%3E%3Cpath d='M24 34L17 44L25 42Z' fill='%23ef4444'/%3E%3Cpath d='M42 34L49 44L41 42Z' fill='%23ef4444'/%3E%3Cpath d='M33 9C26 17 24 27 24 42H42C42 27 40 17 33 9Z' fill='%23f8fafc'/%3E%3Cpath d='M33 9C29.4 13.5 27.4 17.5 26.6 20.5H39.4C38.6 17.5 36.6 13.5 33 9Z' fill='%23ef4444'/%3E%3Ccircle cx='33' cy='28' r='6' fill='%230284c7'/%3E%3C/g%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0' y1='0' x2='180' y2='180' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%231e1b4b'/%3E%3Cstop offset='55%25' stop-color='%23312e81'/%3E%3Cstop offset='100%25' stop-color='%23050816'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='180' height='180' rx='40' fill='url(%23bg)'/%3E%3Ccircle cx='38' cy='42' r='4.5' fill='%23fde047'/%3E%3Ccircle cx='144' cy='135' r='4' fill='%237dd3fc'/%3E%3Cpath d='M28 132C44 149 95 146 131 110C152 88 160 56 152 36' stroke='%2338bdf8' stroke-width='7.5' stroke-linecap='round' fill='none'/%3E%3Cg transform='translate(92 88) rotate(42) scale(2.7) translate(-33 -31)'%3E%3Cpath d='M28 45C28 45 25 53 33 57C41 53 38 45 38 45H28Z' fill='%23f97316'/%3E%3Cpath d='M24 34L17 44L25 42Z' fill='%23ef4444'/%3E%3Cpath d='M42 34L49 44L41 42Z' fill='%23ef4444'/%3E%3Cpath d='M33 9C26 17 24 27 24 42H42C42 27 40 17 33 9Z' fill='%23f8fafc'/%3E%3Cpath d='M33 9C29.4 13.5 27.4 17.5 26.6 20.5H39.4C38.6 17.5 36.6 13.5 33 9Z' fill='%23ef4444'/%3E%3Ccircle cx='33' cy='28' r='6' fill='%230284c7'/%3E%3C/g%3E%3C/svg%3E">
+
     <style>
         /* ==========================================================================
-           1. INTERGALACTIC DARK SPACE THEME & RESPONSIVE CENTERED SHELL
+           1. INTERGALACTIC DARK SPACE THEME & CENTERED RESPONSIVE SHELL (MAX 520PX)
            ========================================================================== */
         :root, html, body {
             color-scheme: dark;
@@ -92,7 +101,7 @@
 
         .app-card {
             width: 100%;
-            max-width: 500px;
+            max-width: 520px;
             background-color: rgba(15, 23, 42, 0.88);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -372,7 +381,6 @@
             flex-shrink: 0;
         }
 
-        /* Vertical Launchpad-to-Moon Corridor */
         .vertical-launch-bay {
             position: relative;
             height: 128px;
@@ -398,7 +406,6 @@
             position: absolute;
         }
 
-        /* Cratered Moon at Top Center */
         .moon-destination {
             position: absolute;
             top: 6px;
@@ -435,7 +442,6 @@
             transform: scale(1);
         }
 
-        /* Vertical Trajectory Guide Dots */
         .ascent-guide-line {
             position: absolute;
             left: 50%;
@@ -448,7 +454,6 @@
             z-index: 1;
         }
 
-        /* Steel Launchpad Base, Gantry Tower & Strobe Beacons */
         .launchpad-deck {
             position: absolute;
             bottom: 0;
@@ -499,7 +504,6 @@
             50% { opacity: 1; }
         }
 
-        /* Left & Right Gantry Towers + Swing-Away Umbilical Clamps */
         .gantry-tower {
             position: absolute;
             bottom: 16px;
@@ -561,7 +565,6 @@
             background-color: #22c55e;
         }
 
-        /* Stationary Grounded Rocket Assembly (Stays on Pad until 100% Launch!) */
         .grounded-rocket-rig {
             position: absolute;
             bottom: 16px;
@@ -587,7 +590,6 @@
             75% { transform: translateX(calc(-50% + 1.2px)) translateY(0px); }
         }
 
-        /* Dramatic Liftoff Trajectory to the Moon at 100% Fuel */
         .grounded-rocket-rig.rocket-liftoff-to-moon {
             animation: none !important;
             transform: translateX(-50%) translateY(-68px) scale(0.76);
@@ -600,7 +602,6 @@
             filter: drop-shadow(0 2px 6px rgba(2, 6, 23, 0.75));
         }
 
-        /* Engine Bell Pre-Ignition Heat Glow & Liftoff Plasma Plume */
         .engine-glow-core {
             width: 14px;
             height: 6px;
@@ -655,7 +656,6 @@
             to { transform: translateX(-50%) scaleX(1.12) scaleY(1.15); }
         }
 
-        /* Progressive Pre-Launch Cryo-Steam & Launch Exhaust Layer */
         .cryo-steam-layer {
             position: absolute;
             bottom: 12px;
@@ -711,7 +711,6 @@
             }
         }
 
-        /* On-Bay Dramatic 3-2-1 Ignition Countdown Overlay */
         .bay-countdown-pill {
             position: absolute;
             top: 54px;
@@ -730,7 +729,6 @@
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65);
         }
 
-        /* Horizontal Liquid Fuel Bar & Stage Milestones */
         .fuel-tank-outer {
             width: 100%;
             height: 11px;
@@ -1822,8 +1820,23 @@
                             <img id="scanThumb" src="" alt="Uploaded spelling sheet" style="width:52px;height:52px;border-radius:10px;object-fit:cover;border:1.5px solid #38bdf8;background:#0f172a;flex-shrink:0;cursor:pointer;" title="Tap to enlarge photo">
                             <div style="flex:1;min-width:0;">
                                 <div id="scanStatusTitle" style="font-size:12px;font-weight:800;color:#38bdf8;">Reading image...</div>
-                                <div id="scanStatusSub" style="font-size:11px;font-weight:600;color:#cbd5e1;">Extracting spelling words with AI</div>
+                                <div id="scanStatusSub" style="font-size:11px;font-weight:600;color:#cbd5e1;">Extracting spelling words</div>
                             </div>
+                        </div>
+
+                        <!-- Live OCR Progress Bar -->
+                        <div id="ocrProgressWrap" class="hidden" style="margin-top:8px;">
+                            <div style="width:100%;height:7px;background:rgba(15,23,42,0.85);border-radius:999px;overflow:hidden;border:1px solid rgba(56,189,248,0.35);">
+                                <div id="ocrProgressBar" style="height:100%;width:10%;background:linear-gradient(90deg,#38bdf8,#818cf8,#34d399);border-radius:999px;transition:width 0.2s ease;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Detected Word Chips (Tap to toggle/remove any noisy OCR word) -->
+                        <div id="ocrDetectedChipsWrap" class="hidden" style="margin-top:8px;">
+                            <div style="font-size:10px;font-weight:800;color:#93c5fd;margin-bottom:5px;text-transform:uppercase;letter-spacing:0.04em;">
+                                Detected Words (Tap any chip to remove):
+                            </div>
+                            <div id="ocrDetectedChips" style="display:flex;flex-wrap:wrap;gap:5px;"></div>
                         </div>
 
                         <!-- Proofread Preview & Quick-Add Input -->
@@ -1880,8 +1893,8 @@
                 </div>
 
                 <div style="background:#1e293b;border:1.5px solid rgba(148,163,184,0.22);border-radius:14px;padding:10px 12px;">
-                    <div style="font-size:12px;font-weight:800;margin-bottom:4px;">🔑 Optional Gemini API Key (Local Offline File Only)</div>
-                    <div style="font-size:11px;font-weight:600;color:#94a3b8;margin-bottom:6px;">Only needed if you download Rocket Spell locally and want cloud AI photo reading.</div>
+                    <div style="font-size:12px;font-weight:800;margin-bottom:4px;">🔑 Optional Gemini API Key (Cloud Handwriting AI)</div>
+                    <div style="font-size:11px;font-weight:600;color:#94a3b8;margin-bottom:6px;">Printed sheets work automatically without a key. Add a free Gemini API key here if you also want cloud AI for tricky handwriting in your APK.</div>
                     <input type="password" id="inputCustomKey" placeholder="AIzaSy..." class="clean-input" style="width:100%;padding:7px 10px;font-size:12px;">
                 </div>
             </div>
@@ -1929,7 +1942,7 @@
             const STORAGE_WEEK_KEY = "rocketspell_week_v1";
             const STORAGE_VAULT_KEY = "rocketspell_vault_v1";
             const STORAGE_PREFS_KEY = "rocketspell_prefs_v1";
-
+            const STORAGE_GEMINI_KEY = "rocketspell_gemini_key";
             // Legacy keys for seamless migration from earlier drafts
             const LEGACY_WEEK_KEYS = ["spellquest_week_final", "spellquest_week_v3", "spellquest_week_v2"];
             const LEGACY_VAULT_KEYS = ["spellquest_vault"];
@@ -2123,8 +2136,13 @@
             }
 
             function getActiveApiKey() {
-                const userKey = (prefs.customKey || "").trim();
-                return (apiKey && apiKey.trim()) ? apiKey.trim() : userKey;
+                const winKey = (typeof window.__GEMINI_API_KEY__ === "string") ? window.__GEMINI_API_KEY__.trim() : "";
+                let storedKey = "";
+                try { storedKey = (localStorage.getItem(STORAGE_GEMINI_KEY) || "").trim(); } catch (e) {}
+                const userKey = (prefs.customKey || storedKey || "").trim();
+                if (apiKey && apiKey.trim()) return apiKey.trim();
+                if (winKey) return winKey;
+                return userKey;
             }
 
             function showSpeakingBadge(active, label) {
@@ -2337,914 +2355,31 @@
                 if (parsedP && typeof parsedP === "object") {
                     prefs = Object.assign({}, prefs, parsedP);
                 }
-
-                if (currentWords.length === 0) {
-                    currentWords = STARTER_WORDS.slice();
-                }
-                mergeIntoVault(currentWords);
-                saveStateToStorage();
-            }
-
-            function shuffle(arr) {
-                const copy = arr.slice();
-                for (let i = copy.length - 1; i > 0; i--) {
-                    const j = Math.floor(Math.random() * (i + 1));
-                    const tmp = copy[i];
-                    copy[i] = copy[j];
-                    copy[j] = tmp;
-                }
-                return copy;
-            }
-
-            function escapeHtml(text) {
-                return String(text)
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;");
-            }
-
-            function updateHeaderUI() {
-                document.getElementById("btnSoundToggle").textContent = prefs.muted ? "🔇" : "🔊";
-                document.getElementById("hudStars").textContent = String(stars);
-                document.getElementById("hudStreak").textContent = String(streak);
-                document.getElementById("hudVaultCount").textContent = String(wordVault.length);
-
-                const btnWeek = document.getElementById("btnPoolWeek");
-                const btnDip = document.getElementById("btnPoolDip");
-                if (prefs.poolMode === "luckydip") {
-                    btnDip.className = "pool-tab pool-tab-dip-active";
-                    btnWeek.className = "pool-tab pool-tab-inactive";
-                } else {
-                    btnWeek.className = "pool-tab pool-tab-week-active";
-                    btnDip.className = "pool-tab pool-tab-inactive";
-                }
-
-                const modeMap = {
-                    mix: "btnModeMix",
-                    scramble: "btnModeScramble",
-                    gaps: "btnModeGaps",
-                    flash: "btnModeFlash",
-                    bubbles: "btnModeBubbles"
-                };
-                Object.keys(modeMap).forEach(function (m) {
-                    const el = document.getElementById(modeMap[m]);
-                    if (!el) return;
-                    if (m === prefs.gameMode) el.classList.add("mode-chip-active");
-                    else el.classList.remove("mode-chip-active");
-                });
-            }
-
-            function renderCryoSteamClouds(pct, isSurge) {
-                const layer = document.getElementById("cryoSteamLayer");
-                if (!layer) return;
-                if (pct <= 0 && !isSurge) {
-                    layer.innerHTML = "";
-                    return;
-                }
-
-                const pairCount = isSurge ? 7 : Math.max(1, Math.min(6, Math.ceil(pct / 18)));
-                const speedSec = isSurge ? 0.95 : Math.max(1.05, 2.5 - (pct / 100) * 1.35);
-                const baseOpacity = isSurge ? 0.95 : Math.min(0.88, 0.35 + (pct / 100) * 0.52);
-                const puffSize = isSurge ? 26 : Math.round(14 + (pct / 100) * 10);
-
-                let html = "";
-                for (let i = 0; i < pairCount; i++) {
-                    const delay = ((i / pairCount) * speedSec).toFixed(2);
-                    const surgeCls = isSurge ? " puff-surge" : "";
-                    html += '<span class="steam-puff puff-left' + surgeCls + '" style="left:calc(50% - 14px);width:' + puffSize + 'px;height:' + puffSize + 'px;--vent-speed:' + speedSec.toFixed(2) + 's;--vent-delay:' + delay + 's;--vent-opacity:' + baseOpacity.toFixed(2) + ';"></span>';
-                    html += '<span class="steam-puff puff-right' + surgeCls + '" style="left:calc(50% + 2px);width:' + puffSize + 'px;height:' + puffSize + 'px;--vent-speed:' + speedSec.toFixed(2) + 's;--vent-delay:' + (parseFloat(delay) + 0.14).toFixed(2) + 's;--vent-opacity:' + baseOpacity.toFixed(2) + ';"></span>';
-                }
-                layer.innerHTML = html;
-            }
-
-            function updateRocketFuelHud(triggerSurge) {
-                const total = Math.max(1, sessionQueue.length);
-                const pct = Math.min(100, Math.round((wordsFueled / total) * 100));
-
-                document.getElementById("fuelPctText").textContent = pct + "%";
-                document.getElementById("fuelWordsText").textContent = wordsFueled + "/" + total;
-                document.getElementById("fuelLiquidFill").style.width = pct + "%";
-
-                const rig = document.getElementById("groundedRocketRig");
-                const glow = document.getElementById("engineGlowCore");
-                const beaconL = document.getElementById("padBeaconLeft");
-                const beaconR = document.getElementById("padBeaconRight");
-                const armL = document.getElementById("umbilicalLeft");
-                const armR = document.getElementById("umbilicalRight");
-
-                if (pct < 100) {
-                    rig.classList.remove("rocket-liftoff-to-moon");
-                    rig.classList.toggle("prelaunch-rumble", pct >= 75);
-                    document.getElementById("liftoffPlasmaPlume").classList.remove("plume-active");
-                    document.getElementById("moonFlagPlanted").classList.remove("flag-visible");
-                    document.getElementById("bayCountdownPill").classList.add("hidden");
-                }
-
-                glow.classList.toggle("glow-warm", pct >= 50 && pct < 85);
-                glow.classList.toggle("glow-hot", pct >= 85);
-
-                beaconL.className = "pad-beacon" + (pct >= 75 ? " beacon-red" : (pct >= 25 ? " beacon-amber" : ""));
-                beaconR.className = "pad-beacon" + (pct >= 75 ? " beacon-red" : (pct >= 25 ? " beacon-amber" : ""));
-
-                if (pct < 100) {
-                    armL.className = "umbilical-arm umbilical-arm-left" + (pct >= 75 ? " clamp-ready" : "");
-                    armR.className = "umbilical-arm umbilical-arm-right" + (pct >= 75 ? " clamp-ready" : "");
-                }
-
-                renderCryoSteamClouds(pct, Boolean(triggerSurge));
-                if (triggerSurge && pct < 100) {
-                    setTimeout(function () {
-                        renderCryoSteamClouds(pct, false);
-                    }, 950);
-                }
-
-                const statusEl = document.getElementById("missionStatusLabel");
-                if (pct >= 100) {
-                    statusEl.textContent = "🚀 100% Fuel! Ignition & Liftoff!";
-                } else if (pct >= 90) {
-                    statusEl.textContent = "🔥 T-Minus Ready! 1 Word to Launch!";
-                } else if (pct >= 75) {
-                    statusEl.textContent = "⚡ 75% Main Engine Chilldown!";
-                } else if (pct >= 50) {
-                    statusEl.textContent = "🧪 50% LOX Tanks Pressurized!";
-                } else if (pct >= 25) {
-                    statusEl.textContent = "❄️ 25% Cryo Steam Venting!";
-                } else {
-                    statusEl.textContent = "🛸 Pad Ready: Fill Tank to 100%";
-                }
-
-                document.getElementById("ms25").classList.toggle("milestone-lit", pct >= 25);
-                document.getElementById("ms50").classList.toggle("milestone-lit", pct >= 50);
-                document.getElementById("ms75").classList.toggle("milestone-lit", pct >= 75);
-                document.getElementById("ms100").classList.toggle("milestone-lit", pct >= 100);
-            }
-
-            function buildSessionQueue(trickyOnly) {
-                if (trickyOnly && trickySet.size > 0) {
-                    const allMap = new Map();
-                    wordVault.forEach(function (v) { allMap.set(v.word.toLowerCase(), v); });
-                    currentWords.forEach(function (c) { allMap.set(c.word.toLowerCase(), c); });
-                    const weekSet = new Set(currentWords.map(function (c) { return c.word.toLowerCase(); }));
-                    return shuffle(Array.from(trickySet).map(function (w) {
-                        const obj = allMap.get(w.toLowerCase()) || { word: w, clue: buildFallbackClue(w) };
-                        return {
-                            word: obj.word,
-                            clue: obj.clue,
-                            origin: weekSet.has(obj.word.toLowerCase()) ? "week" : "past"
-                        };
-                    }));
-                }
-
-                if (prefs.poolMode === "luckydip") {
-                    const total = Math.min(wordVault.length, prefs.dipSize || 20);
-                    const weekSet = new Set(currentWords.map(function (c) { return c.word.toLowerCase(); }));
-                    const pastWords = wordVault.filter(function (v) { return !weekSet.has(v.word.toLowerCase()); }).map(function (v) {
-                        return { word: v.word, clue: v.clue, origin: "past" };
-                    });
-                    const weekWords = currentWords.map(function (c) {
-                        return { word: c.word, clue: c.clue, origin: "week" };
-                    });
-                    if (pastWords.length === 0) {
-                        return shuffle(weekWords).slice(0, total);
-                    }
-                    const wantPast = Math.min(pastWords.length, Math.max(1, Math.round(total * 0.7)));
-                    const wantWeek = Math.min(weekWords.length, total - wantPast);
-                    let mix = shuffle(pastWords).slice(0, wantPast).concat(shuffle(weekWords).slice(0, wantWeek));
-                    if (mix.length < total) {
-                        const used = new Set(mix.map(function (x) { return x.word.toLowerCase(); }));
-                        const extra = shuffle(pastWords).filter(function (x) { return !used.has(x.word.toLowerCase()); });
-                        mix = mix.concat(extra.slice(0, total - mix.length));
-                    }
-                    return shuffle(mix);
-                }
-
-                return shuffle(currentWords.map(function (c) {
-                    return { word: c.word, clue: c.clue, origin: "week" };
-                }));
-            }
-
-            function startNewRound(trickyOnly) {
-                clearTimeout(flashTimer);
-                clearInterval(countdownTimer);
-                sessionQueue = buildSessionQueue(Boolean(trickyOnly));
-                currentIdx = 0;
-                wordsFueled = 0;
-                if (!trickyOnly) {
-                    stars = 0;
-                    streak = 0;
-                    bestStreak = 0;
-                    firstTryCount = 0;
-                    trickySet.clear();
-                }
-
-                const hudBox = document.getElementById("missionHudBox");
-                if (hudBox) hudBox.classList.remove("hud-launch-shake");
-                const rig = document.getElementById("groundedRocketRig");
-                if (rig) rig.classList.remove("rocket-liftoff-to-moon", "prelaunch-rumble");
-                document.getElementById("liftoffPlasmaPlume").classList.remove("plume-active");
-                document.getElementById("moonFlagPlanted").classList.remove("flag-visible");
-                document.getElementById("bayCountdownPill").classList.add("hidden");
-
-                updateHeaderUI();
-                updateRocketFuelHud(false);
-                document.getElementById("victorySection").classList.add("hidden");
-                document.getElementById("stageSection").classList.remove("hidden");
-                loadCurrentChallenge(true);
-            }
-
-            /* ======================================================================
-               5. SINGLE-LINE SLOT SIZING & 4 VISUAL SPELLING MODES
-               ====================================================================== */
-            function computeSlotMetrics(len) {
-                const availW = Math.min(window.innerWidth - 52, 464);
-                const gap = len >= 11 ? 3 : len >= 8 ? 4 : 6;
-                const rawW = Math.floor((availW - gap * (len - 1)) / len);
-                const width = Math.max(22, Math.min(42, rawW));
-                const height = Math.max(32, Math.min(48, Math.round(width * 1.15)));
-                const fontSize = Math.max(13, Math.min(21, Math.round(width * 0.54)));
-                return { width: width, height: height, gap: gap, fontSize: fontSize };
-            }
-
-            function resolveModeForWord() {
-                if (prefs.gameMode !== "mix") return prefs.gameMode;
-                const modes = ["scramble", "gaps", "flash", "bubbles"];
-                return modes[Math.floor(Math.random() * modes.length)];
-            }
-
-            function loadCurrentChallenge(autoSpeak) {
-                clearTimeout(flashTimer);
-                isSolved = false;
-                hadMistake = false;
-
-                const item = sessionQueue[currentIdx];
-                if (!item) return;
-
-                document.getElementById("wordCounterPill").textContent = "Word " + (currentIdx + 1) + " of " + sessionQueue.length;
-
-                const tag = document.getElementById("wordOriginTag");
-                if (item.origin === "past") {
-                    tag.textContent = "🕰️ Past Word";
-                    tag.className = "origin-tag origin-past";
-                } else {
-                    tag.textContent = "📋 This Week";
-                    tag.className = "origin-tag origin-week";
-                }
-
-                document.getElementById("clueText").textContent = '"' + (item.clue || buildFallbackClue(item.word)) + '"';
-                const hintBtn = document.getElementById("btnHint");
-                hintBtn.disabled = false;
-                hintBtn.style.opacity = "1";
-
-                activeMode = resolveModeForWord();
-                renderActiveMode();
-
-                if (autoSpeak) {
-                    setTimeout(function () { speakCurrentWord(false); }, 160);
-                }
-            }
-
-            function renderActiveMode() {
-                clearTimeout(flashTimer);
-                const word = sessionQueue[currentIdx].word;
-                const fb = document.getElementById("feedbackMsg");
-                fb.style.color = "#cbd5e1";
-
-                if (activeMode === "scramble") {
-                    fb.textContent = "Tap the shuffled letters to fuel the thrusters!";
-                    setupScramble(word);
-                } else if (activeMode === "gaps") {
-                    fb.textContent = "Fill in the missing letter gaps!";
-                    setupGaps(word);
-                } else if (activeMode === "flash") {
-                    fb.textContent = "Study the word chunks before they hide!";
-                    setupFlash(word);
-                } else {
-                    fb.textContent = "Pop the floating bubbles in spelling order!";
-                    setupBubbles(word);
-                }
-            }
-
-            /* --- MODE A: SCRAMBLE --- */
-            let scrambleData = { word: "", slots: [], bank: [] };
-
-            function setupScramble(word) {
-                const chars = word.split("");
-                let tiles = shuffle(chars.map(function (c, i) { return { id: i, ch: c, used: false }; }));
-                if (tiles.map(function (t) { return t.ch; }).join("") === word && chars.length > 1) {
-                    tiles.reverse();
-                }
-                scrambleData = {
-                    word: word,
-                    slots: new Array(chars.length).fill(null),
-                    bank: tiles
-                };
-                drawScramble();
-            }
-
-            function drawScramble() {
-                const arena = document.getElementById("puzzleArena");
-                const m = computeSlotMetrics(scrambleData.word.length);
-                const nextIdx = scrambleData.slots.indexOf(null);
-
-                const slotsHtml = scrambleData.slots.map(function (tile, idx) {
-                    let cls = "letter-slot ";
-                    if (isSolved) cls += "slot-solved";
-                    else if (tile) cls += "slot-filled";
-                    else if (idx === nextIdx) cls += "slot-next";
-                    else cls += "slot-empty";
-                    return '<div data-action="unplace-scramble" data-idx="' + idx + '" class="' + cls + '" style="width:' + m.width + 'px;height:' + m.height + 'px;font-size:' + m.fontSize + 'px;">' + (tile ? escapeHtml(tile.ch) : "") + '</div>';
-                }).join("");
-
-                const bankHtml = scrambleData.bank.map(function (t) {
-                    return '<button type="button" data-action="pick-scramble" data-id="' + t.id + '" ' + (t.used || isSolved ? "disabled" : "") + ' class="letter-tile">' + escapeHtml(t.ch) + '</button>';
-                }).join("");
-
-                arena.innerHTML = '<div class="single-line-slots" style="gap:' + m.gap + 'px;">' + slotsHtml + '</div><div class="tile-rack">' + bankHtml + '</div>';
-            }
-
-            function onPickScramble(tileId) {
-                if (isSolved) return;
-                const tile = scrambleData.bank.find(function (t) { return t.id === tileId; });
-                if (!tile || tile.used) return;
-                const emptyIdx = scrambleData.slots.indexOf(null);
-                if (emptyIdx === -1) return;
-
-                playSfx("tap");
-                tile.used = true;
-                scrambleData.slots[emptyIdx] = tile;
-                drawScramble();
-
-                if (scrambleData.slots.indexOf(null) === -1) {
-                    const attempt = scrambleData.slots.map(function (t) { return t.ch; }).join("");
-                    if (attempt.toLowerCase() === scrambleData.word.toLowerCase()) {
-                        completeWordSuccess();
-                    } else {
-                        triggerGentleMiss("Not quite! Tap any blue tile to swap it.");
-                    }
-                }
-            }
-
-            function onUnplaceScramble(slotIdx) {
-                if (isSolved) return;
-                const tile = scrambleData.slots[slotIdx];
-                if (!tile) return;
-                playSfx("tap");
-                tile.used = false;
-                scrambleData.slots[slotIdx] = null;
-                drawScramble();
-            }
-
-            /* --- MODE B: MISSING GAPS --- */
-            let gapsData = { word: "", slots: [], bank: [] };
-
-            function setupGaps(word) {
-                const chars = word.split("");
-                const gapCount = Math.max(2, Math.min(chars.length - 1, Math.round(chars.length * 0.45)));
-                const gapIndices = new Set(shuffle(chars.map(function (_, i) { return i; })).slice(0, gapCount));
-
-                const slots = chars.map(function (ch, idx) {
-                    return { idx: idx, target: ch, isGap: gapIndices.has(idx), tile: null };
-                });
-
-                const needed = slots.filter(function (s) { return s.isGap; }).map(function (s) { return s.target; });
-                const extras = shuffle(["e", "a", "i", "o", "s", "t", "r", "n", "l"].filter(function (c) {
-                    return needed.indexOf(c) === -1;
-                })).slice(0, 3);
-
-                const bank = shuffle(needed.concat(extras)).map(function (ch, idx) {
-                    return { id: idx, ch: ch, used: false };
-                });
-
-                gapsData = { word: word, slots: slots, bank: bank };
-                drawGaps();
-            }
-
-            function drawGaps() {
-                const arena = document.getElementById("puzzleArena");
-                const m = computeSlotMetrics(gapsData.word.length);
-                const nextGap = gapsData.slots.findIndex(function (s) { return s.isGap && !s.tile; });
-
-                const slotsHtml = gapsData.slots.map(function (s, idx) {
-                    if (!s.isGap) {
-                        return '<div class="letter-slot ' + (isSolved ? "slot-solved" : "slot-fixed") + '" style="width:' + m.width + 'px;height:' + m.height + 'px;font-size:' + m.fontSize + 'px;">' + escapeHtml(s.target) + '</div>';
-                    }
-                    let cls = "letter-slot ";
-                    if (isSolved) cls += "slot-solved";
-                    else if (s.tile) cls += "slot-filled";
-                    else if (idx === nextGap) cls += "slot-next";
-                    else cls += "slot-empty";
-
-                    return '<div data-action="clear-gap" data-idx="' + idx + '" class="' + cls + '" style="width:' + m.width + 'px;height:' + m.height + 'px;font-size:' + m.fontSize + 'px;">' + (s.tile ? escapeHtml(s.tile.ch) : "") + '</div>';
-                }).join("");
-
-                const bankHtml = gapsData.bank.map(function (t) {
-                    return '<button type="button" data-action="pick-gap" data-id="' + t.id + '" ' + (t.used || isSolved ? "disabled" : "") + ' class="letter-tile">' + escapeHtml(t.ch) + '</button>';
-                }).join("");
-
-                arena.innerHTML = '<div class="single-line-slots" style="gap:' + m.gap + 'px;">' + slotsHtml + '</div><div class="tile-rack">' + bankHtml + '</div>';
-            }
-
-            function onPickGap(tileId) {
-                if (isSolved) return;
-                const tile = gapsData.bank.find(function (t) { return t.id === tileId; });
-                if (!tile || tile.used) return;
-                const slot = gapsData.slots.find(function (s) { return s.isGap && !s.tile; });
-                if (!slot) return;
-
-                playSfx("tap");
-                tile.used = true;
-                slot.tile = tile;
-                drawGaps();
-
-                const allDone = gapsData.slots.every(function (s) { return !s.isGap || s.tile !== null; });
-                if (allDone) {
-                    const attempt = gapsData.slots.map(function (s) { return s.isGap ? s.tile.ch : s.target; }).join("");
-                    if (attempt.toLowerCase() === gapsData.word.toLowerCase()) {
-                        completeWordSuccess();
-                    } else {
-                        triggerGentleMiss("Almost! Tap a blue gap letter to remove it.");
-                    }
-                }
-            }
-
-            function onClearGap(slotIdx) {
-                if (isSolved) return;
-                const slot = gapsData.slots[slotIdx];
-                if (!slot || !slot.isGap || !slot.tile) return;
-                playSfx("tap");
-                slot.tile.used = false;
-                slot.tile = null;
-                drawGaps();
-            }
-
-            /* --- MODE C: FLASH & SPELL --- */
-            function splitWordChunks(word) {
-                const parts = word.match(/[^aeiouy]*[aeiouy]+(?:[^aeiouy](?![aeiouy]))?|[^aeiouy]+/gi);
-                return parts && parts.length > 0 ? parts : [word];
-            }
-
-            function formatChunksHtml(word) {
-                return splitWordChunks(word).map(function (ch, idx) {
-                    return '<span class="' + (idx % 2 === 0 ? "chunk-a" : "chunk-b") + '">' + escapeHtml(ch) + '</span>';
-                }).join("");
-            }
-
-            function setupFlash(word) {
-                const arena = document.getElementById("puzzleArena");
-                const secs = Math.round((prefs.flashMs || 3000) / 1000);
-                arena.innerHTML =
-                    '<div id="flashCard" class="flash-box">' +
-                        '<div style="font-size:11px;font-weight:800;color:#93c5fd;margin-bottom:6px;">👀 Memorise the Chunks (' + secs + 's)...</div>' +
-                        '<div class="flash-word">' + formatChunksHtml(word) + '</div>' +
-                    '</div>' +
-                    '<div id="flashEntryWrap" class="hidden">' +
-                        '<input type="text" id="inputFlashSpell" class="flash-input" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" placeholder="Type the word here...">' +
-                        '<div class="flash-btn-row">' +
-                            '<button type="button" data-action="flash-peek" class="btn-peek">👁️ Peek</button>' +
-                            '<button type="button" data-action="flash-check" class="btn-check-spell">✓ Check Spelling</button>' +
-                        '</div>' +
-                    '</div>';
-
-                flashTimer = setTimeout(hideFlashWord, prefs.flashMs || 3000);
-            }
-
-            function hideFlashWord() {
-                const card = document.getElementById("flashCard");
-                const wrap = document.getElementById("flashEntryWrap");
-                if (!card || !wrap) return;
-                card.innerHTML = '<div style="font-size:26px;margin-bottom:4px;">🙈</div><div style="font-size:15px;font-weight:800;color:#e2e8f0;">Curtain Closed! Spell it from memory:</div>';
-                wrap.classList.remove("hidden");
-                document.getElementById("feedbackMsg").textContent = "Type the word and tap Check Spelling!";
-                const inp = document.getElementById("inputFlashSpell");
-                if (inp) inp.focus();
-            }
-
-            function onFlashPeek() {
-                if (isSolved) return;
-                playSfx("tap");
-                hadMistake = true;
-                const card = document.getElementById("flashCard");
-                if (!card) return;
-                card.innerHTML = '<div class="flash-word">' + formatChunksHtml(sessionQueue[currentIdx].word) + '</div>';
-                clearTimeout(flashTimer);
-                flashTimer = setTimeout(hideFlashWord, 1300);
-            }
-
-            function onFlashCheck() {
-                if (isSolved) return;
-                const inp = document.getElementById("inputFlashSpell");
-                if (!inp) return;
-                const typed = inp.value.trim();
-                if (!typed) return;
-                const target = sessionQueue[currentIdx].word;
-                if (typed.toLowerCase() === target.toLowerCase()) {
-                    const card = document.getElementById("flashCard");
-                    if (card) card.innerHTML = '<div class="flash-word" style="color:#34d399;">' + escapeHtml(target) + '</div>';
-                    completeWordSuccess();
-                } else {
-                    triggerGentleMiss("Not quite! Tap Hear Word or Peek.");
-                }
-            }
-
-            /* --- MODE D: BUBBLE POP --- */
-            let bubbleData = { word: "", nextIdx: 0, items: [] };
-
-            function setupBubbles(word) {
-                const chars = word.split("");
-                const extras = shuffle(["x", "z", "q", "k", "w", "v", "j", "p", "m"].filter(function (c) {
-                    return word.toLowerCase().indexOf(c) === -1;
-                })).slice(0, 4);
-
-                const pool = shuffle(chars.concat(extras));
-                const cols = Math.min(5, Math.max(4, Math.ceil(pool.length / 3)));
-                const rows = Math.ceil(pool.length / cols);
-
-                const items = pool.map(function (ch, idx) {
-                    const col = idx % cols;
-                    const row = Math.floor(idx / cols);
-                    const cellW = 86 / cols;
-                    const cellH = 76 / rows;
-                    return {
-                        id: idx,
-                        ch: ch,
-                        popped: false,
-                        left: Math.round(6 + col * cellW + Math.random() * 4),
-                        top: Math.round(8 + row * cellH + Math.random() * 4),
-                        delay: (idx * 0.2).toFixed(2)
-                    };
-                });
-
-                bubbleData = { word: word, nextIdx: 0, items: items };
-                drawBubbles();
-            }
-
-            function drawBubbles() {
-                const arena = document.getElementById("puzzleArena");
-                const m = computeSlotMetrics(bubbleData.word.length);
-
-                const slotsHtml = bubbleData.word.split("").map(function (ch, idx) {
-                    const shown = idx < bubbleData.nextIdx || isSolved;
-                    let cls = "letter-slot ";
-                    if (isSolved) cls += "slot-solved";
-                    else if (shown) cls += "slot-filled";
-                    else if (idx === bubbleData.nextIdx) cls += "slot-next";
-                    else cls += "slot-empty";
-
-                    return '<div class="' + cls + '" style="width:' + m.width + 'px;height:' + m.height + 'px;font-size:' + m.fontSize + 'px;">' + (shown ? escapeHtml(ch) : "") + '</div>';
-                }).join("");
-
-                const bubblesHtml = bubbleData.items.filter(function (b) { return !b.popped; }).map(function (b) {
-                    return '<button type="button" data-action="pop-bubble" data-id="' + b.id + '" class="bubble-btn" style="left:' + b.left + '%;top:' + b.top + '%;animation-delay:' + b.delay + 's;">' + escapeHtml(b.ch) + '</button>';
-                }).join("");
-
-                arena.innerHTML = '<div class="single-line-slots" style="gap:' + m.gap + 'px;">' + slotsHtml + '</div><div class="bubble-pond">' + bubblesHtml + '</div>';
-            }
-
-            function onPopBubble(bubbleId) {
-                if (isSolved) return;
-                const b = bubbleData.items.find(function (x) { return x.id === bubbleId; });
-                if (!b || b.popped) return;
-                const expected = bubbleData.word[bubbleData.nextIdx];
-                if (b.ch.toLowerCase() === expected.toLowerCase()) {
-                    playSfx("pop");
-                    b.popped = true;
-                    bubbleData.nextIdx += 1;
-                    drawBubbles();
-                    if (bubbleData.nextIdx >= bubbleData.word.length) {
-                        completeWordSuccess();
-                    }
-                } else {
-                    triggerGentleMiss('Oops! Find the letter "' + expected.toUpperCase() + '" next.');
-                }
-            }
-
-            /* ======================================================================
-               6. HINT, MISTAKE, ROCKET FUELING & MOON LAUNCH COMPLETION
-               ====================================================================== */
-            function triggerGentleMiss(message) {
-                playSfx("miss");
-                hadMistake = true;
-                streak = 0;
-                trickySet.add(sessionQueue[currentIdx].word);
-                updateHeaderUI();
-
-                const fb = document.getElementById("feedbackMsg");
-                fb.style.color = "#fda4af";
-                fb.textContent = message;
-
-                const arena = document.getElementById("puzzleArena");
-                arena.classList.remove("shake-now");
-                void arena.offsetWidth;
-                arena.classList.add("shake-now");
-            }
-
-            function useHint() {
-                if (isSolved) return;
-                playSfx("tap");
-                hadMistake = true;
-                const word = sessionQueue[currentIdx].word;
-
-                if (activeMode === "scramble") {
-                    const idx = scrambleData.slots.findIndex(function (t, i) {
-                        return !t || t.ch.toLowerCase() !== word[i].toLowerCase();
-                    });
-                    if (idx === -1) return;
-                    if (scrambleData.slots[idx]) {
-                        scrambleData.slots[idx].used = false;
-                        scrambleData.slots[idx] = null;
-                    }
-                    const targetChar = word[idx].toLowerCase();
-                    let tile = scrambleData.bank.find(function (t) { return !t.used && t.ch.toLowerCase() === targetChar; });
-                    if (!tile) {
-                        const wrongSlot = scrambleData.slots.findIndex(function (t, i) {
-                            return t && t.ch.toLowerCase() === targetChar && word[i].toLowerCase() !== targetChar;
-                        });
-                        if (wrongSlot !== -1) {
-                            tile = scrambleData.slots[wrongSlot];
-                            scrambleData.slots[wrongSlot] = null;
-                        }
-                    }
-                    if (tile) {
-                        tile.used = true;
-                        scrambleData.slots[idx] = tile;
-                        drawScramble();
-                        if (scrambleData.slots.indexOf(null) === -1 && scrambleData.slots.map(function (t) { return t.ch; }).join("").toLowerCase() === word.toLowerCase()) {
-                            completeWordSuccess();
-                        }
-                    }
-                } else if (activeMode === "gaps") {
-                    const slot = gapsData.slots.find(function (s) {
-                        return s.isGap && (!s.tile || s.tile.ch.toLowerCase() !== s.target.toLowerCase());
-                    });
-                    if (!slot) return;
-                    if (slot.tile) {
-                        slot.tile.used = false;
-                        slot.tile = null;
-                    }
-                    const tile = gapsData.bank.find(function (t) { return !t.used && t.ch.toLowerCase() === slot.target.toLowerCase(); });
-                    if (tile) {
-                        tile.used = true;
-                        slot.tile = tile;
-                        drawGaps();
-                        if (gapsData.slots.every(function (s) { return !s.isGap || (s.tile && s.tile.ch.toLowerCase() === s.target.toLowerCase()); })) {
-                            completeWordSuccess();
-                        }
-                    }
-                } else if (activeMode === "bubbles") {
-                    const expected = word[bubbleData.nextIdx];
-                    const b = bubbleData.items.find(function (x) { return !x.popped && x.ch.toLowerCase() === expected.toLowerCase(); });
-                    if (b) onPopBubble(b.id);
-                } else if (activeMode === "flash") {
-                    onFlashPeek();
-                }
-            }
-
-            function completeWordSuccess() {
-                isSolved = true;
-                wordsFueled += 1;
-
-                const isFinalWord = wordsFueled >= sessionQueue.length;
-                const fuelRatio = wordsFueled / Math.max(1, sessionQueue.length);
-
-                stars += hadMistake ? 1 : 2;
-                streak += 1;
-                if (streak > bestStreak) bestStreak = streak;
-                if (!hadMistake) firstTryCount += 1;
-
-                updateHeaderUI();
-                updateRocketFuelHud(true);
-
-                if (activeMode === "scramble") drawScramble();
-                else if (activeMode === "gaps") drawGaps();
-                else if (activeMode === "bubbles") drawBubbles();
-
-                const pct = Math.min(100, Math.round(fuelRatio * 100));
-                const word = sessionQueue[currentIdx].word;
-                const fb = document.getElementById("feedbackMsg");
-                fb.style.color = "#6ee7b7";
-
-                const hintBtn = document.getElementById("btnHint");
-                hintBtn.disabled = true;
-                hintBtn.style.opacity = "0.4";
-
-                if (!isFinalWord) {
-                    playSfx("fuel", fuelRatio);
-                    fb.textContent = '⛽ Fuel Boost! "' + word + '" (' + pct + '% Tank)';
-                    setTimeout(function () {
-                        currentIdx += 1;
-                        loadCurrentChallenge(true);
-                    }, 1050);
-                } else {
-                    fb.textContent = "🔥 100% FUEL REACHED! PREPARING FOR LIFTOFF...";
-                    triggerDramaticMoonLaunch();
-                }
-            }
-
-            function triggerDramaticMoonLaunch() {
-                const hudBox = document.getElementById("missionHudBox");
-                const bayPill = document.getElementById("bayCountdownPill");
-                const armL = document.getElementById("umbilicalLeft");
-                const armR = document.getElementById("umbilicalRight");
-                const rig = document.getElementById("groundedRocketRig");
-                const plume = document.getElementById("liftoffPlasmaPlume");
-                const flag = document.getElementById("moonFlagPlanted");
-
-                playSfx("clamp", 1);
-                armL.classList.add("clamp-released");
-                armR.classList.add("clamp-released");
-                hudBox.classList.add("hud-launch-shake");
-
-                const ticks = ["T-MINUS 3...", "T-MINUS 2...", "T-MINUS 1...", "🔥 IGNITION & LIFTOFF!"];
-                let idx = 0;
-                bayPill.textContent = ticks[0];
-                bayPill.classList.remove("hidden");
-
-                clearInterval(countdownTimer);
-                countdownTimer = setInterval(function () {
-                    idx += 1;
-                    if (idx < ticks.length) {
-                        bayPill.textContent = ticks[idx];
-                        if (idx < 3) {
-                            playSfx("tap");
-                        } else {
-                            playSfx("launch", 1);
-                            plume.classList.add("plume-active");
-                            renderCryoSteamClouds(100, true);
-                            rig.classList.add("rocket-liftoff-to-moon");
-                        }
-                    } else {
-                        clearInterval(countdownTimer);
-                    }
-                }, 460);
-
-                setTimeout(function () {
-                    flag.classList.add("flag-visible");
-                    hudBox.classList.remove("hud-launch-shake");
-                }, 2550);
-
-                setTimeout(function () {
-                    showMoonLandingVictory();
-                }, 3250);
-            }
-
-            function showMoonLandingVictory() {
-                document.getElementById("stageSection").classList.add("hidden");
-                document.getElementById("victorySection").classList.remove("hidden");
-
-                const banner = document.getElementById("countdownBanner");
-                banner.textContent = "🌕 100% FUEL — LUNAR TOUCHDOWN!";
-
-                document.getElementById("vicStars").textContent = String(stars);
-                document.getElementById("vicFirstTry").textContent = firstTryCount + "/" + sessionQueue.length;
-                document.getElementById("vicBestStreak").textContent = String(bestStreak);
-                document.getElementById("victorySub").textContent =
-                    prefs.poolMode === "luckydip"
-                        ? "100% Fuel Reached on your " + sessionQueue.length + "-word Lucky Dip Moon Mission!"
-                        : "100% Fuel Reached! All " + sessionQueue.length + " weekly words propelled your rocket to the Moon!";
-
-                const trickyBox = document.getElementById("trickyBox");
-                const trickyChips = document.getElementById("trickyChips");
-                if (trickySet.size > 0) {
-                    trickyBox.classList.remove("hidden");
-                    trickyChips.innerHTML = Array.from(trickySet).map(function (w) {
-                        return '<span style="background:rgba(255,255,255,0.92);color:#be123c;border:1px solid #fecdd3;border-radius:8px;padding:3px 8px;font-size:12px;font-weight:800;">' + escapeHtml(w) + '</span>';
-                    }).join("");
-                } else {
-                    trickyBox.classList.add("hidden");
-                }
-            }
-
-            /* ======================================================================
-               7. PARENT WORD MANAGER MODAL & GEMINI AI PHOTO SCANNER
-               ====================================================================== */
-            function sanitizeExtractedWords(rawItems) {
-                const stopWords = new Set([
-                    "year", "week", "spelling", "spellings", "list", "words", "word", "test",
-                    "date", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday",
-                    "term", "autumn", "spring", "summer", "name", "class", "group", "homework",
-                    "look", "say", "cover", "write", "check", "practice", "practise", "statutory",
-                    "curriculum", "english", "page", "set", "the", "and", "for", "with", "from", "are"
-                ]);
-
-                const seen = new Set();
-                const clean = [];
-                for (let i = 0; i < rawItems.length; i++) {
-                    const token = String(rawItems[i] || "")
-                        .trim()
-                        .replace(/^[\d.)\-•*\s]+/, "")
-                        .replace(/[^a-zA-Z'-]/g, "")
-                        .toLowerCase();
-                    if (token.length < 2 || token.length > 24) continue;
-                    if (stopWords.has(token)) continue;
-                    if (!seen.has(token)) {
-                        seen.add(token);
-                        clean.push(token);
-                        if (clean.length >= 20) break;
-                    }
-                }
-                return clean;
-            }
-
-            function parseTextareaWords() {
-                const raw = document.getElementById("textareaWords").value || "";
-                return sanitizeExtractedWords(raw.split(/[\n,;]+/));
-            }
-
-            function refreshModalCounters() {
-                document.getElementById("tabWeekCount").textContent = String(parseTextareaWords().length);
-                document.getElementById("tabVaultCount").textContent = String(wordVault.length);
-            }
-
-            function renderVaultPane() {
-                refreshModalCounters();
-                const box = document.getElementById("vaultListContainer");
-                const weekSet = new Set(parseTextareaWords().map(function (w) { return w.toLowerCase(); }));
-
-                if (wordVault.length === 0) {
-                    box.innerHTML = '<div style="text-align:center;padding:16px;font-size:12px;font-weight:700;color:#94a3b8;">No words in Vault yet.</div>';
-                    return;
-                }
-
-                box.innerHTML = wordVault.slice().reverse().map(function (v) {
-                    const isCurrent = weekSet.has(v.word.toLowerCase());
-                    return '<div class="vault-row">' +
-                        '<div style="min-width:0;flex:1;">' +
-                            '<div style="display:flex;align-items:center;gap:6px;">' +
-                                '<span style="font-size:14px;font-weight:800;color:#f8fafc;">' + escapeHtml(v.word) + '</span>' +
-                                (isCurrent
-                                    ? '<span style="background:rgba(99,102,241,0.3);color:#c7d2fe;border-radius:6px;padding:1px 6px;font-size:10px;font-weight:800;">This Week</span>'
-                                    : '<span style="background:rgba(245,158,11,0.25);color:#fde68a;border-radius:6px;padding:1px 6px;font-size:10px;font-weight:800;">Past Word</span>') +
-                            '</div>' +
-                            '<div style="font-size:11px;font-weight:600;color:#94a3b8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + escapeHtml(v.clue || buildFallbackClue(v.word)) + '</div>' +
-                        '</div>' +
-                        '<button type="button" data-action="delete-vault-word" data-word="' + escapeHtml(v.word) + '" style="background:rgba(225,29,72,0.25);color:#fda4af;border:1px solid rgba(251,113,133,0.4);border-radius:8px;padding:4px 8px;font-size:11px;font-weight:800;">✕</button>' +
-                    '</div>';
-                }).join("");
-            }
-
-            function switchModalTab(tab) {
-                playSfx("tap");
-                document.getElementById("tabBtnWeek").className = tab === "week" ? "modal-tab-btn modal-tab-active" : "modal-tab-btn";
-                document.getElementById("tabBtnVault").className = tab === "vault" ? "modal-tab-btn modal-tab-vault-active" : "modal-tab-btn";
-                document.getElementById("tabBtnSettings").className = tab === "settings" ? "modal-tab-btn modal-tab-active" : "modal-tab-btn";
-
-                document.getElementById("paneWeek").classList.toggle("hidden", tab !== "week");
-                document.getElementById("paneVault").classList.toggle("hidden", tab !== "vault");
-                document.getElementById("paneSettings").classList.toggle("hidden", tab !== "settings");
-
-                if (tab === "vault") renderVaultPane();
-            }
-
+                try {
+                    const directKey = localStorage.getItem(STORAGE_GEMINI_KEY);
+                    if (directKey && !prefs.customKey) prefs.customKey = directKey.trim();
+                } catch (e) {}
             function openParentModal() {
                 playSfx("tap");
                 document.getElementById("textareaWords").value = currentWords.map(function (c) { return c.word; }).join("\n");
                 document.getElementById("scanFeedbackBox").classList.add("hidden");
+                document.getElementById("ocrProgressWrap").classList.add("hidden");
+                document.getElementById("ocrDetectedChipsWrap").classList.add("hidden");
                 document.getElementById("photoProofreadBar").classList.add("hidden");
                 document.getElementById("selectDipSize").value = String(prefs.dipSize || 20);
                 document.getElementById("selectFlashTime").value = String(prefs.flashMs || 3000);
-                document.getElementById("inputCustomKey").value = prefs.customKey || "";
+                document.getElementById("inputCustomKey").value = getActiveApiKey();
                 refreshModalCounters();
                 switchModalTab("week");
                 document.getElementById("parentModal").classList.remove("hidden");
             }
-
-            function closeParentModal() {
-                playSfx("tap");
-                document.getElementById("parentModal").classList.add("hidden");
-            }
-
-            function applyWordsToCurrentAndVault(wordStrings, clueMapOptional) {
-                const existingMap = new Map();
-                wordVault.forEach(function (v) { existingMap.set(v.word.toLowerCase(), v); });
-                currentWords.forEach(function (c) { existingMap.set(c.word.toLowerCase(), c); });
-
-                if (!wordStrings || wordStrings.length === 0) {
-                    currentWords = STARTER_WORDS.slice();
-                } else {
-                    currentWords = wordStrings.map(function (w) {
-                        const lower = w.toLowerCase();
-                        const aiClue = clueMapOptional && clueMapOptional.get(lower);
-                        const old = existingMap.get(lower);
-                        return {
-                            word: w,
-                            clue: aiClue || (old && old.clue) || buildFallbackClue(w)
-                        };
-                    });
-                }
-
-                mergeIntoVault(currentWords);
-                saveStateToStorage();
-                updateHeaderUI();
-            }
-
-            function saveParentModal() {
-                const parsed = parseTextareaWords();
-                applyWordsToCurrentAndVault(parsed, null);
-
                 prefs.dipSize = parseInt(document.getElementById("selectDipSize").value, 10) || 20;
                 prefs.flashMs = parseInt(document.getElementById("selectFlashTime").value, 10) || 3000;
                 prefs.customKey = (document.getElementById("inputCustomKey").value || "").trim();
+                try {
+                    if (prefs.customKey) localStorage.setItem(STORAGE_GEMINI_KEY, prefs.customKey);
+                    else localStorage.removeItem(STORAGE_GEMINI_KEY);
+                } catch (e) {}
 
                 saveStateToStorage();
                 playSfx("fuel", 1);
@@ -3252,30 +2387,137 @@
                 startNewRound(false);
             }
 
-            function resizePhotoToJpeg(file) {
+            /* ======================================================================
+               3-TIER APK & GITHUB PAGES PHOTO-TO-WORDS OCR PIPELINE
+               Tier 1: Gemini Cloud Vision (if API key configured)
+               Tier 2: Zero-Key On-Demand Tesseract.js OCR + Contrast Preprocessing
+               Tier 3: Interactive Detected Chips + Proofread Quick-Add Bar
+               ====================================================================== */
+            let tesseractLoaderPromise = null;
+            let lastDetectedWordList = [];
+
+            function setOcrProgress(pct, show) {
+                const wrap = document.getElementById("ocrProgressWrap");
+                const bar = document.getElementById("ocrProgressBar");
+                if (!wrap || !bar) return;
+                if (show) {
+                    wrap.classList.remove("hidden");
+                    bar.style.width = Math.max(8, Math.min(100, pct)) + "%";
+                } else {
+                    wrap.classList.add("hidden");
+                }
+            }
+
+            function loadTesseractOnDemand() {
+                if (window.Tesseract) return Promise.resolve(window.Tesseract);
+                if (tesseractLoaderPromise) return tesseractLoaderPromise;
+
+                const cdns = [
+                    "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js",
+                    "https://unpkg.com/tesseract.js@5/dist/tesseract.min.js"
+                ];
+
+                tesseractLoaderPromise = new Promise(function (resolve, reject) {
+                    let idx = 0;
+                    function tryNextCdn() {
+                        if (idx >= cdns.length) {
+                            tesseractLoaderPromise = null;
+                            reject(new Error("OCR engine unavailable offline"));
+                            return;
+                        }
+                        const script = document.createElement("script");
+                        script.src = cdns[idx];
+                        script.async = true;
+                        script.onload = function () {
+                            if (window.Tesseract) resolve(window.Tesseract);
+                            else {
+                                idx += 1;
+                                tryNextCdn();
+                            }
+                        };
+                        script.onerror = function () {
+                            idx += 1;
+                            tryNextCdn();
+                        };
+                        document.head.appendChild(script);
+                    }
+                    tryNextCdn();
+                });
+
+                return tesseractLoaderPromise;
+            }
+
+            function preprocessSpellingSheetImage(file) {
                 return new Promise(function (resolve, reject) {
                     const reader = new FileReader();
                     reader.onload = function (ev) {
                         const img = new Image();
                         img.onload = function () {
-                            const maxDim = 1200;
+                            const targetMax = 1400;
                             let w = img.width;
                             let h = img.height;
-                            if (w > maxDim || h > maxDim) {
+                            if (w > targetMax || h > targetMax) {
                                 if (w > h) {
-                                    h = Math.round((h * maxDim) / w);
-                                    w = maxDim;
+                                    h = Math.round((h * targetMax) / w);
+                                    w = targetMax;
                                 } else {
-                                    w = Math.round((w * maxDim) / h);
-                                    h = maxDim;
+                                    w = Math.round((w * targetMax) / h);
+                                    h = targetMax;
                                 }
+                            } else if (w < 900 && h < 900) {
+                                // Upscale small phone thumbnails so OCR reads small print clearly
+                                const scale = Math.min(2, targetMax / Math.max(w, h));
+                                w = Math.round(w * scale);
+                                h = Math.round(h * scale);
                             }
-                            const canvas = document.createElement("canvas");
-                            canvas.width = w;
-                            canvas.height = h;
-                            const ctx = canvas.getContext("2d");
-                            ctx.drawImage(img, 0, 0, w, h);
-                            resolve(canvas.toDataURL("image/jpeg", 0.85));
+
+                            // 1. Clean color JPEG for thumbnail preview & optional Gemini Vision
+                            const colorCanvas = document.createElement("canvas");
+                            colorCanvas.width = w;
+                            colorCanvas.height = h;
+                            const cCtx = colorCanvas.getContext("2d");
+                            cCtx.drawImage(img, 0, 0, w, h);
+                            const colorDataUrl = colorCanvas.toDataURL("image/jpeg", 0.88);
+
+                            // 2. High-contrast grayscale + adaptive thresholding for Tesseract OCR
+                            const ocrCanvas = document.createElement("canvas");
+                            ocrCanvas.width = w;
+                            ocrCanvas.height = h;
+                            const oCtx = ocrCanvas.getContext("2d");
+                            oCtx.drawImage(img, 0, 0, w, h);
+
+                            try {
+                                const imageData = oCtx.getImageData(0, 0, w, h);
+                                const data = imageData.data;
+                                let lumSum = 0;
+                                const pixelCount = data.length / 4;
+                                const lumArr = new Uint8Array(pixelCount);
+
+                                for (let i = 0, p = 0; i < data.length; i += 4, p++) {
+                                    const lum = Math.round(0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]);
+                                    lumArr[p] = lum;
+                                    lumSum += lum;
+                                }
+
+                                const avgLum = lumSum / Math.max(1, pixelCount);
+                                const threshold = Math.max(85, Math.min(205, avgLum * 0.88));
+
+                                for (let i = 0, p = 0; i < data.length; i += 4, p++) {
+                                    const g = lumArr[p];
+                                    // Contrast stretch + soft binarization so ink stands out from ruled paper
+                                    let val = (g - 128) * 1.55 + 128;
+                                    if (val < threshold - 18) val = 0;
+                                    else if (val > threshold + 22) val = 255;
+                                    val = Math.max(0, Math.min(255, val));
+                                    data[i] = val;
+                                    data[i + 1] = val;
+                                    data[i + 2] = val;
+                                }
+                                oCtx.putImageData(imageData, 0, 0);
+                            } catch (e) {}
+
+                            const ocrDataUrl = ocrCanvas.toDataURL("image/png");
+                            resolve({ colorDataUrl: colorDataUrl, ocrDataUrl: ocrDataUrl });
                         };
                         img.onerror = reject;
                         img.src = ev.target.result;
@@ -3283,6 +2525,51 @@
                     reader.onerror = reject;
                     reader.readAsDataURL(file);
                 });
+            }
+
+            function parseOcrTextIntoSpellingWords(rawText) {
+                if (!rawText) return [];
+                const tokens = rawText
+                    .replace(/[\r\n]+/g, " ")
+                    .split(/[\s,.;:!?()[\]{}"“”/\\|_+=*•–—\d]+/);
+                return sanitizeExtractedWords(tokens);
+            }
+
+            function renderDetectedWordChips(words) {
+                lastDetectedWordList = words.slice();
+                const wrap = document.getElementById("ocrDetectedChipsWrap");
+                const box = document.getElementById("ocrDetectedChips");
+                if (!wrap || !box) return;
+
+                if (!words || words.length === 0) {
+                    wrap.classList.add("hidden");
+                    box.innerHTML = "";
+                    return;
+                }
+
+                wrap.classList.remove("hidden");
+                box.innerHTML = words.map(function (w) {
+                    return '<button type="button" data-action="remove-ocr-chip" data-word="' + escapeHtml(w) + '" style="background:rgba(56,189,248,0.2);color:#e0f2fe;border:1px solid rgba(56,189,248,0.5);border-radius:999px;padding:3px 9px;font-size:11px;font-weight:800;display:inline-flex;align-items:center;gap:4px;">' +
+                        '<span>' + escapeHtml(w) + '</span><span style="color:#fda4af;">✕</span></button>';
+                }).join("");
+            }
+
+            async function runOnDeviceTesseractOcr(ocrDataUrl, onStatus) {
+                onStatus(18, "Loading on-device OCR reader...");
+                const Tesseract = await loadTesseractOnDemand();
+
+                onStatus(32, "Reading text from photo...");
+                const result = await Tesseract.recognize(ocrDataUrl, "eng", {
+                    logger: function (m) {
+                        if (m && m.status === "recognizing text" && typeof m.progress === "number") {
+                            const pct = Math.round(32 + m.progress * 63);
+                            onStatus(pct, "Reading photo... " + Math.round(m.progress * 100) + "%");
+                        }
+                    }
+                });
+
+                const rawText = (result && result.data && result.data.text) ? result.data.text : "";
+                return parseOcrTextIntoSpellingWords(rawText);
             }
 
             function parseJsonResponseSafely(rawText) {
@@ -3369,50 +2656,76 @@
 
                 box.classList.remove("hidden");
                 proofreadBar.classList.add("hidden");
+                renderDetectedWordChips([]);
+                setOcrProgress(10, true);
                 title.style.color = "#38bdf8";
-                title.textContent = "⏳ Reading image...";
-                sub.textContent = "Preparing spelling sheet photo";
+                title.textContent = "⏳ Enhancing photo contrast...";
+                sub.textContent = "Preparing spelling sheet for text extraction";
 
                 try {
-                    const dataUrl = await resizePhotoToJpeg(file);
-                    thumb.src = dataUrl;
-                    fullImg.src = dataUrl;
+                    const processed = await preprocessSpellingSheetImage(file);
+                    thumb.src = processed.colorDataUrl;
+                    fullImg.src = processed.colorDataUrl;
 
                     const key = getActiveApiKey();
-                    const base64Data = dataUrl.split(",")[1];
-
-                    title.textContent = "✨ Extracting spelling words with AI...";
-                    sub.textContent = "Scanning printed or handwritten words";
+                    const base64Data = processed.colorDataUrl.split(",")[1];
 
                     let extracted = { words: [], clueMap: new Map() };
-                    const models = ["gemini-2.5-flash", "gemini-2.0-flash"];
+                    let readerSource = "Built-In OCR";
 
-                    for (let i = 0; i < models.length; i++) {
-                        try {
-                            extracted = await callGeminiVisionModel(models[i], base64Data, key);
-                            if (extracted.words.length > 0) break;
-                        } catch (modelErr) {}
+                    // Tier 1: Try Gemini Cloud Vision if a key is available
+                    if (key) {
+                        title.textContent = "✨ Reading sheet with Gemini Vision...";
+                        sub.textContent = "Scanning printed or handwritten words";
+                        setOcrProgress(40, true);
+                        const models = ["gemini-2.5-flash", "gemini-2.0-flash"];
+                        for (let i = 0; i < models.length; i++) {
+                            try {
+                                extracted = await callGeminiVisionModel(models[i], base64Data, key);
+                                if (extracted.words.length > 0) {
+                                    readerSource = "Gemini AI Vision";
+                                    break;
+                                }
+                            } catch (modelErr) {}
+                        }
                     }
 
+                    // Tier 2: Automatic Zero-Key Client-Side Tesseract.js OCR (works in APK & GitHub Pages!)
+                    if (extracted.words.length === 0) {
+                        const ocrWords = await runOnDeviceTesseractOcr(processed.ocrDataUrl, function (pct, label) {
+                            setOcrProgress(pct, true);
+                            title.textContent = "🔍 " + label;
+                            sub.textContent = "Running built-in on-device text reader";
+                        });
+                        extracted = { words: ocrWords, clueMap: new Map() };
+                        readerSource = "Built-In OCR";
+                    }
+
+                    setOcrProgress(100, false);
+
+                    // Tier 3: If still 0 words (e.g., blank photo or extreme cursive without API key), show proofread drawer
                     if (extracted.words.length === 0) {
                         title.style.color = "#fbbf24";
-                        title.textContent = "📷 Photo ready — review or add words below";
-                        sub.textContent = "Tap thumbnail to toggle photo preview, or type words below.";
+                        title.textContent = "📷 Photo ready — type or add words below";
+                        sub.textContent = "No clear printed letters detected; read your photo below.";
                         proofreadBar.classList.remove("hidden");
                         return;
                     }
 
+                    // Populate textarea, update This Week + Lucky Dip Vault, and show interactive chips
                     document.getElementById("textareaWords").value = extracted.words.join("\n");
                     applyWordsToCurrentAndVault(extracted.words, extracted.clueMap);
+                    renderDetectedWordChips(extracted.words);
                     refreshModalCounters();
 
                     playSfx("fuel", 1);
                     title.style.color = "#34d399";
-                    title.textContent = "✅ Added " + extracted.words.length + " words to This Week & Vault!";
-                    sub.textContent = "Tap thumbnail to check photo, or hit Save & Launch Mission.";
+                    title.textContent = "✅ Found " + extracted.words.length + " words (" + readerSource + ")!";
+                    sub.textContent = "Tap any chip to remove unwanted words, or tap thumbnail to inspect photo.";
                 } catch (err) {
+                    setOcrProgress(0, false);
                     title.style.color = "#fbbf24";
-                    title.textContent = "📷 Photo loaded — type words below";
+                    title.textContent = "📷 Photo loaded — add words below";
                     sub.textContent = "Read your photo below and tap + Add Word.";
                     proofreadBar.classList.remove("hidden");
                 }
@@ -3485,55 +2798,55 @@
                     if (action === "pick-scramble") {
                         onPickScramble(parseInt(target.getAttribute("data-id"), 10));
                     } else if (action === "unplace-scramble") {
-                        onUnplaceScramble(parseInt(target.getAttribute("data-idx"), 10));
-                    } else if (action === "pick-gap") {
-                        onPickGap(parseInt(target.getAttribute("data-id"), 10));
-                    } else if (action === "clear-gap") {
-                        onClearGap(parseInt(target.getAttribute("data-idx"), 10));
-                    } else if (action === "pop-bubble") {
-                        onPopBubble(parseInt(target.getAttribute("data-id"), 10));
-                    } else if (action === "flash-peek") {
-                        onFlashPeek();
-                    } else if (action === "flash-check") {
-                        onFlashCheck();
+                // Toggle full photo preview when tapping thumbnail
+                document.getElementById("scanThumb").addEventListener("click", function () {
+                    playSfx("tap");
+                    document.getElementById("photoProofreadBar").classList.toggle("hidden");
+                });
+
+                // Remove any noisy OCR word chip with a single tap
+                document.getElementById("ocrDetectedChips").addEventListener("click", function (e) {
+                    const chip = e.target.closest('[data-action="remove-ocr-chip"]');
+                    if (!chip) return;
+                    const wordToRemove = (chip.getAttribute("data-word") || "").toLowerCase();
+                    if (!wordToRemove) return;
+                    playSfx("tap");
+                    const updated = parseTextareaWords().filter(function (w) {
+                        return w.toLowerCase() !== wordToRemove;
+                    });
+                    document.getElementById("textareaWords").value = updated.join("\n");
+                    renderDetectedWordChips(updated);
+                    refreshModalCounters();
+                });
+
+                // Support pasting a screenshot/photo directly in the Word Manager modal
+                document.addEventListener("paste", function (e) {
+                    const modal = document.getElementById("parentModal");
+                    if (!modal || modal.classList.contains("hidden")) return;
+                    const items = e.clipboardData && e.clipboardData.items;
+                    if (!items) return;
+                    for (let i = 0; i < items.length; i++) {
+                        if (items[i].type && items[i].type.indexOf("image/") === 0) {
+                            const blob = items[i].getAsFile();
+                            if (blob) {
+                                handleSheetPhotoFile(blob);
+                                break;
+                            }
+                        }
                     }
                 });
 
-                arena.addEventListener("keydown", function (e) {
-                    if (e.target && e.target.id === "inputFlashSpell" && e.key === "Enter") {
-                        e.preventDefault();
-                        onFlashCheck();
-                    }
-                });
-
-                document.getElementById("btnRetryTricky").addEventListener("click", function () {
+                // Photo proofread quick-add bar
+                document.getElementById("btnQuickAddPhotoWord").addEventListener("click", function () {
+                    const inp = document.getElementById("inputQuickPhotoWord");
+                    const clean = (inp.value || "").trim().replace(/[^a-zA-Z'-]/g, "").toLowerCase();
+                    if (clean.length < 2) return;
                     playSfx("tap");
-                    startNewRound(true);
-                });
-                document.getElementById("btnPlayAgain").addEventListener("click", function () {
-                    playSfx("tap");
-                    startNewRound(false);
-                });
-                document.getElementById("btnPlayLuckyDip").addEventListener("click", function () {
-                    playSfx("tap");
-                    prefs.poolMode = "luckydip";
-                    saveStateToStorage();
-                    updateHeaderUI();
-                    startNewRound(false);
-                });
-
-                document.getElementById("btnCloseModalTop").addEventListener("click", closeParentModal);
-                document.getElementById("btnCancelModal").addEventListener("click", closeParentModal);
-                document.getElementById("btnSaveModal").addEventListener("click", saveParentModal);
-
-                document.getElementById("tabBtnWeek").addEventListener("click", function () { switchModalTab("week"); });
-                document.getElementById("tabBtnVault").addEventListener("click", function () { switchModalTab("vault"); });
-                document.getElementById("tabBtnSettings").addEventListener("click", function () { switchModalTab("settings"); });
-
-                document.getElementById("textareaWords").addEventListener("input", refreshModalCounters);
-                document.getElementById("btnResetSample").addEventListener("click", function () {
-                    playSfx("tap");
-                    document.getElementById("textareaWords").value = STARTER_WORDS.map(function (d) { return d.word; }).join("\n");
+                    const ta = document.getElementById("textareaWords");
+                    ta.value = (ta.value.trim() ? ta.value.trim() + "\n" : "") + clean;
+                    inp.value = "";
+                    const updated = parseTextareaWords();
+                    renderDetectedWordChips(updated);
                     refreshModalCounters();
                 });
 
